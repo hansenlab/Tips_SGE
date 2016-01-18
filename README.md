@@ -1,11 +1,5 @@
----
-author: Kasper D. Hansen
-title: Tips for the Sub Grid Engine (SGE)
----
+# Tips for the Sun Grid Engine (SGE)
 
-# Preface
-
-Title: Tips for the Sun Grid Engine (SGE)  
 Author: Kasper D. Hansen  
 Home: [GitHub](https://github.com/kasperdanielhansen/Tips_SGE)  
 License: CC BY  
