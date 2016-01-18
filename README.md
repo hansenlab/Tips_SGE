@@ -3,6 +3,13 @@ author: Kasper D. Hansen
 title: Tips for the Sub Grid Engine (SGE)
 ---
 
+# Preface
+
+Title: Tips for the Sun Grid Engine (SGE)  
+Author: Kasper D. Hansen  
+Home: [GitHub](https://github.com/kasperdanielhansen/Tips_SGE)  
+License: CC BY  
+
 # Dot files
 
 In your home directory, create a file called `.sge_request`.  It contains standard parameters to any `qrsh` or `qsub` command.  Mine contains
