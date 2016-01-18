@@ -89,3 +89,11 @@ qsub -N sam2bam -hold_jid align sam2bam.sh
 
 Here `-N` is the name of the job.
 
+## Slack integration
+
+Rather than getting an email, I prefer to get a Slack notification when a job has finished. I currently have this set up in my `.sge_request` file so that I get a notification when __every__ job finishes; this is definitely overkill. Here are the steps necessary to set it up:
+
+1. Visit [https://slack.com/apps/A0F81496D-email](https://slack.com/apps/A0F81496D-email) and click configure (for your JHU genomics account).
+2. Click add configuration and create new __private__ channel. Fill in the necessary details.
+3. Click add email integration and copy the email address.
+4. In your `.sge_request` file, add this email address using the `-M` flag, e.g., `-M random-slack-email@jhu-genomics.slack.com`. Also, ensure you have the `-m` flag set to something that ensures emails are actually sent, e.g., `-m e` sends when a job ends.
