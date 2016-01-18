@@ -4,7 +4,7 @@ Author: Kasper D. Hansen
 Home: [GitHub](https://github.com/kasperdanielhansen/Tips_SGE)  
 License: CC BY  
 
-# Dot files
+## Dot files
 
 In your home directory, create a file called `.sge_request`.  It contains standard parameters to any `qrsh` or `qsub` command.  Mine contains
 
@@ -20,7 +20,7 @@ In your home directory, create a file called `.sge_request`.  It contains standa
 
 Anything you type in at the command will override whatever is in your `.sge_request`.
 
-# File headers
+## File headers
 
 I start my shell scripts with the following
 
@@ -36,7 +36,7 @@ The second line gives arguments to `qsub` when the script is submitted.  It has 
 
 The last line has nothing to do with SGE per se, but it gives some options to Bash, namely "stop at an error" (`-e`) and "stop if you encounter undefined variables" (`-u`).  The later one sometimes has to be removed.
 
-# Array jobs
+## Array jobs
 
 Array jobs are truly awesome.  It lets you execute a script many times, the only difference being that an environment variable called `SGE_TASK_ID` is defined, which is equal to the array number.  This sounds weird, but consider the following R code:
 
@@ -78,7 +78,7 @@ BASENAME=$(basename ${BASEFILE})
 BASENAME=${BASENAME%%.fastq.gz}
 ```
 
-# Holding jobs
+## Holding jobs
 
 If you have multiple scripts which should be executed in order, you can tell SGE to hold running them.  The easiest way to do this is to give the jobs a name, and then wait for the job.  Example 
 
